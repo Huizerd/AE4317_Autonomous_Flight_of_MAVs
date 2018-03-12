@@ -1,7 +1,7 @@
 import numpy as np
 import cv2
 
-cap = cv2.VideoCapture("/home/huis/GoogleDrive/C&S/AE4317_Autonomous_Flight_of_MAVs/Assignment/Group7/ObstacleVideos/IMG_2187.MOV")
+cap = cv2.VideoCapture("Bebop_color_movinghand.avi")
 
 if not cap.isOpened(): 
     raise Exception("Could not load video!")
@@ -29,16 +29,56 @@ p0 = cv2.goodFeaturesToTrack(old_gray, mask = None, **feature_params)
 # Create a mask image for drawing purposes
 mask = np.zeros_like(old_frame)
 
+FoE = [0.0, 0.0]
+
 while(1):
     ret,frame = cap.read()
     frame_gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
-    # calculate optical flow
+    # Calculate optical flow
     p1, st, err = cv2.calcOpticalFlowPyrLK(old_gray, frame_gray, p0, None, **lk_params)
 
     # Select good points
     good_new = p1[st==1]
     good_old = p0[st==1]
+
+    flow_vec = good_new - good_old
+
+    n_points = p0.shape[0]
+    sample_size = 3 # minimal sample size
+
+    if n_points >= sample_size:
+
+        # Estimate linear flow field for horizontal and vertical flow separately
+        # Make a big matrix A with elements [x, y, 1]
+        A = np.concatenate((good_old, np.ones([good_old.shape[0], 1])), axis=1)
+        A_inv = np.linalg.pinv(A) # pseudo-inverse
+
+        # Target = horizontal flow
+        u_vec  = flow_vec[:, 0]
+        pu     = np.dot(A_inv, u_vec)
+        errs_u = np.abs(np.dot(A, pu) - u_vec) # least-squares error
+
+        # Target = vertical flow
+        v_vec  = flow_vec[:, 1]
+        pv     = np.dot(A_inv, v_vec)
+        errs_v = np.abs(np.dot(A, pv) - v_vec)
+
+        err = (np.mean(errs_u) + np.mean(errs_v)) / 2.
+
+    else:
+        # not enough samples to make a linear fit:
+        pu = np.asarray([0.0]*3);
+        pv = np.asarray([0.0]*3);
+        err = 10.;
+
+    # The flow planes intersect the flow = 0 plane in a line
+    # The FoE is the point where these 2 lines intersect (flow = (0, 0))
+    FoE[0] = (pu[2] * pv[1] - pv[2] * pu[1]) / (pv[0] * pu[1] - pu[0] * pu[1]);
+    FoE[1] = (-pu[0] * FoE[0] + pu[2]) / (pu[1]);
+    divergence = (pu[0] + pv[1]) / 2.; # divide by 2 or not?
+
+    print('error = {}, FoE = {}, {}, and divergence = {}'.format(err, FoE[0], FoE[1], divergence))
 
     # draw the tracks
     for i,(new,old) in enumerate(zip(good_new,good_old)):
