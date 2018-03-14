@@ -1,8 +1,9 @@
+import sys
 import numpy as np
 import argparse
 import cv2
  
-cap = cv2.VideoCapture("/home/huis/GoogleDrive/C&S/AE4317_Autonomous_Flight_of_MAVs/Assignment/Group7/ObstacleVideos/IMG_2186.MOV")
+cap = cv2.VideoCapture(sys.argv[1])
  
 while(1):
   ret, frame = cap.read()

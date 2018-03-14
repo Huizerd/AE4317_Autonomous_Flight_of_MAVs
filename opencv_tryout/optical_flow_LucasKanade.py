@@ -1,7 +1,8 @@
+import sys
 import numpy as np
 import cv2
 
-cap = cv2.VideoCapture("Bebop_color_movinghand.avi")
+cap = cv2.VideoCapture(sys.argv[1])
 
 if not cap.isOpened(): 
     raise Exception("Could not load video!")

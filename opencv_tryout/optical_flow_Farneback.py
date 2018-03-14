@@ -1,8 +1,9 @@
+import sys
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
 
-cap = cv2.VideoCapture("Bebop_color_movinghand.avi")
+cap = cv2.VideoCapture(sys.argv[1])
 ret, frame1 = cap.read()
 
 prvs = cv2.cvtColor(frame1, cv2.COLOR_BGR2GRAY)
