@@ -1,0 +1,34 @@
+/home/michiel/paparazzi/var/aircrafts/CR7_MAV/nps/subsystems/electrical.o: \
+ subsystems/electrical.c \
+ /home/michiel/paparazzi/sw/airborne/subsystems/electrical.h \
+ /home/michiel/paparazzi/sw/include/std.h \
+ /home/michiel/paparazzi/sw/include/message_pragmas.h \
+ /home/michiel/paparazzi/var/aircrafts/CR7_MAV/nps/generated/airframe.h \
+ /home/michiel/paparazzi/sw/airborne/subsystems/actuators/actuators_default.h \
+ /home/michiel/paparazzi/sw/airborne/boards/pc_sim.h \
+ /home/michiel/paparazzi/sw/airborne/subsystems/actuators/actuators_4017.h \
+ /home/michiel/paparazzi/sw/airborne/arch/sim/subsystems/actuators/servos_4017_hw.h \
+ /home/michiel/paparazzi/sw/airborne/mcu_periph/adc.h \
+ /home/michiel/paparazzi/sw/airborne/arch/sim/mcu_periph/adc_arch.h \
+ /home/michiel/paparazzi/sw/airborne/subsystems/commands.h \
+ /home/michiel/paparazzi/sw/airborne/paparazzi.h \
+ /home/michiel/paparazzi/sw/airborne/autopilot.h \
+ /home/michiel/paparazzi/sw/airborne/paparazzi.h \
+ /home/michiel/paparazzi/sw/airborne/state.h \
+ /home/michiel/paparazzi/sw/airborne/math/pprz_algebra_int.h \
+ /home/michiel/paparazzi/sw/airborne/math/pprz_algebra.h \
+ /home/michiel/paparazzi/sw/airborne/math/pprz_trig_int.h \
+ /home/michiel/paparazzi/sw/airborne/math/pprz_algebra_float.h \
+ /home/michiel/paparazzi/sw/airborne/math/pprz_algebra.h \
+ /home/michiel/paparazzi/sw/include/message_pragmas.h \
+ /home/michiel/paparazzi/sw/airborne/math/pprz_geodetic_int.h \
+ /home/michiel/paparazzi/sw/airborne/math/pprz_geodetic.h \
+ /home/michiel/paparazzi/sw/airborne/math/pprz_algebra_int.h \
+ /home/michiel/paparazzi/sw/airborne/math/pprz_geodetic_float.h \
+ /home/michiel/paparazzi/sw/airborne/math/pprz_algebra_float.h \
+ /home/michiel/paparazzi/sw/airborne/math/pprz_orientation_conversion.h \
+ /home/michiel/paparazzi/sw/airborne/math/pprz_algebra_int.h \
+ /home/michiel/paparazzi/sw/airborne/math/pprz_algebra_float.h \
+ firmwares/rotorcraft/autopilot_utils.h \
+ firmwares/rotorcraft/autopilot_firmware.h \
+ firmwares/rotorcraft/autopilot_static.h

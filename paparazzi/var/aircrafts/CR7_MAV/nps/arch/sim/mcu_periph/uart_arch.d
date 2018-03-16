@@ -1,0 +1,9 @@
+/home/michiel/paparazzi/var/aircrafts/CR7_MAV/nps/arch/sim/mcu_periph/uart_arch.o: \
+ arch/sim/mcu_periph/uart_arch.c \
+ /home/michiel/paparazzi/sw/airborne/boards/pc_sim.h \
+ /home/michiel/paparazzi/sw/airborne/mcu_periph/uart.h \
+ /home/michiel/paparazzi/sw/airborne/arch/sim/mcu_periph/uart_arch.h \
+ /home/michiel/paparazzi/var/include/pprzlink/pprzlink_device.h \
+ /home/michiel/paparazzi/sw/include/std.h \
+ /home/michiel/paparazzi/sw/include/message_pragmas.h \
+ arch/linux/serial_port.h arch/linux/rt_priority.h

@@ -1,0 +1,28 @@
+/home/michiel/paparazzi/var/aircrafts/CR7_MAV/nps/nps/nps_sensor_baro.o: \
+ /home/michiel/paparazzi/sw/simulator/nps/nps_sensor_baro.c \
+ /home/michiel/paparazzi/sw/simulator/nps/nps_sensor_baro.h \
+ /home/michiel/paparazzi/sw/airborne/math/pprz_algebra.h \
+ /home/michiel/paparazzi/sw/include/std.h \
+ /home/michiel/paparazzi/sw/include/message_pragmas.h \
+ /home/michiel/paparazzi/sw/airborne/math/pprz_algebra_double.h \
+ /home/michiel/paparazzi/sw/airborne/math/pprz_algebra.h \
+ /home/michiel/paparazzi/sw/airborne/math/pprz_algebra_float.h \
+ /home/michiel/paparazzi/sw/include/message_pragmas.h \
+ /home/michiel/paparazzi/sw/airborne/math/pprz_algebra_float.h \
+ /home/michiel/paparazzi/var/aircrafts/CR7_MAV/nps/generated/airframe.h \
+ /home/michiel/paparazzi/sw/airborne/subsystems/actuators/actuators_default.h \
+ /home/michiel/paparazzi/sw/airborne/boards/pc_sim.h \
+ /home/michiel/paparazzi/sw/airborne/subsystems/actuators/actuators_4017.h \
+ /home/michiel/paparazzi/sw/airborne/arch/sim/subsystems/actuators/servos_4017_hw.h \
+ /home/michiel/paparazzi/sw/simulator/nps/nps_fdm.h \
+ /home/michiel/paparazzi/sw/simulator/nps/../flight_gear.h \
+ /home/michiel/paparazzi/sw/airborne/math/pprz_geodetic_double.h \
+ /home/michiel/paparazzi/sw/airborne/math/pprz_geodetic.h \
+ /home/michiel/paparazzi/sw/airborne/math/pprz_algebra_double.h \
+ /home/michiel/paparazzi/sw/simulator/nps/nps_random.h \
+ /home/michiel/paparazzi/conf/simulator/nps/nps_sensors_params_default.h \
+ /home/michiel/paparazzi/sw/airborne/subsystems/imu.h \
+ /home/michiel/paparazzi/sw/airborne/math/pprz_algebra_int.h \
+ /home/michiel/paparazzi/sw/airborne/math/pprz_trig_int.h \
+ /home/michiel/paparazzi/sw/airborne/math/pprz_orientation_conversion.h \
+ /home/michiel/paparazzi/sw/airborne/subsystems/imu/imu_nps.h
