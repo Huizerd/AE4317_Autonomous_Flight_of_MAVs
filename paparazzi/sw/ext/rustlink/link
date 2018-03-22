@@ -1,2 +1,0 @@
-#!/bin/bash
-exec cargo run --manifest-path sw/ext/rustlink/Cargo.toml --release -- $*
