@@ -1,4 +1,4 @@
 # OpenCV tryout
-opencv_tryout/*.MOV
-opencv_tryout/*.avi
-opencv_tryout/*.png
+*.MOV
+*.avi
+*.png
