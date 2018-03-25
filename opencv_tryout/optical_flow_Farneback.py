@@ -40,7 +40,7 @@ while True:
 
     cv2.imshow("frame2", bgr)
 
-    k = cv2.waitKey(30) & 0xff # to select only the last 8 bits
+    k = cv2.waitKey(1) & 0xff # to select only the last 8 bits
 
     if k == 27:
         break

@@ -4,7 +4,7 @@ import cv2
 
 cap = cv2.VideoCapture(sys.argv[1])
 
-if not cap.isOpened(): 
+if not cap.isOpened():
     raise Exception("Could not load video!")
 
 # params for ShiTomasi corner detection
@@ -24,8 +24,12 @@ color = np.random.randint(0,255,(100,3))
 # Take first frame and find corners in it
 ret, old_frame = cap.read()
 
+# Get bounding box
+bbox = cv2.selectROI(old_frame, False)
+
+
 old_gray = cv2.cvtColor(old_frame, cv2.COLOR_BGR2GRAY)
-p0 = cv2.goodFeaturesToTrack(old_gray, mask = None, **feature_params)
+p0 = cv2.goodFeaturesToTrack(old_gray, bbox, mask = None, **feature_params)
 
 # Create a mask image for drawing purposes
 mask = np.zeros_like(old_frame)
@@ -90,7 +94,7 @@ while(1):
     img = cv2.add(frame,mask)
 
     cv2.imshow("frame",img)
-    k = cv2.waitKey(30) & 0xff
+    k = cv2.waitKey(20) & 0xff
     if k == 27:
         break
 
