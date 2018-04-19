@@ -1,5 +1,1 @@
-# OpenCV tryout
-*.MOV
-*.avi
-*.png
-*.mp4
+*.pyc
