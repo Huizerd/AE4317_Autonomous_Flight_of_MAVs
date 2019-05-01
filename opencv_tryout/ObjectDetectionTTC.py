@@ -1,7 +1,6 @@
 # Based on a paper by Mori and Scherer: First Results in Detecting and Avoiding
 # Frontal Obstacles from a Monocular Camera for MAVs
 #
-# Author: Jesse Hagenaars, 12-03-2018
 
 
 
