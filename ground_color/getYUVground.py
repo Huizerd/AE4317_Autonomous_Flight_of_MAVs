@@ -1,7 +1,5 @@
 # Function to detect the thresholds needed for correct ground detection
 # in the cyberzoo. Resulting thresholds are in YUV.
-#
-# Jesse Hagenaars - 22-03-2018
 
 import cv2
 import numpy as np
